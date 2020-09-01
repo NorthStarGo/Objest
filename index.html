@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/template-web.js"></script>
+    <script src="/js/index.js"></script>
+</head>
+<body>
+    <div class="center">
+        <div class="row">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <img src="./images/loading.gif" alt="" style="display: none;" id="loading" />
+            </ul>
+        </div>
+        <div class="row2" id="row2">
+            
+            <script type="text/html" id="tpl-news">
+                {{each data}} {{if $index <=2}}
+                <div class="d1">
+                    <img src="{{$value.img_url}}" alt="">
+                    <h3>{{$value.short_name}}</h3>
+                    <p>{{$value.short_intro}}</p>
+                </div>
+                {{/if}}
+                {{/each}}
+            </script>
+        </div>
+    </div>
+</body>
+</html>
